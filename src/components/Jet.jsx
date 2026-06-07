@@ -6,8 +6,8 @@ Command: npx gltfjsx@6.5.3 public/models/jet/jet.glb
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function jet(props) {
-  const { nodes, materials } = useGLTF('/jet.glb')
+export function Jetplane(props) {
+  const { nodes, materials } = useGLTF('./public/models/Jet/Jet.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Jet_mesh.geometry} material={materials.Jet_mat1} />
@@ -15,4 +15,4 @@ export function jet(props) {
   )
 }
 
-useGLTF.preload('./models/jet/jet.glb')
+useGLTF.preload('./public/models/Jet/Jet.glb')
