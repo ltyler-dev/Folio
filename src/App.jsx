@@ -4,10 +4,7 @@ import { Experience } from "./components/Experience";
 function App() {
   return (
     <>
-      <Canvas camera={{
-        position: [0, 0, 5],
-        fov: 30,
-      }}>
+      <Canvas>
         <color attach="background" args={["#ececec"]} />
         <Experience />
       </Canvas>
