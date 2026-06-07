@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function cloud(props) {
-  const { nodes, materials } = useGLTF('./models/clouds/cloud.glb')
+  const { nodes, materials } = useGLTF('/cloud.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Sphere001.geometry} material={materials._crayfishdiffuse} />

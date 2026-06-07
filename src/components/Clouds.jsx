@@ -6,14 +6,11 @@ Command: npx gltfjsx@6.5.3 public/models/clouds/clouds.glb
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function cloudcluster({ opacity, props }) {
-  const { nodes, materials } = useGLTF('./models/clouds/clouds.glb')
+export function cloudcluster(props) {
+  const { nodes, materials } = useGLTF('/clouds.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh
-      geometry={nodes.Node.geometry} 
-      material={materials.mat21} 
-      transparent opacity={opacity}/>
+      <mesh geometry={nodes.Node.geometry} material={materials.mat21} />
     </group>
   )
 }

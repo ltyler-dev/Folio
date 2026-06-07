@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function ufo(props) {
-  const { nodes, materials } = useGLTF('./models/clouds/Flying saucer.glb')
+  const { nodes, materials } = useGLTF('/Flying saucer.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Node.geometry} material={materials.MAIN} />
